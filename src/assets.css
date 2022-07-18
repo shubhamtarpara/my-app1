@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.search-input {
+    margin: auto;
+    width: 100%;
+    max-width: 85%;  
+}
+.search-input input {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    font-size: 22px;
+    padding-left: 55px;
+    background: lightgray;
+    border: 3px solid black;
+}
+.search-input span{
+    position: absolute;
+    left: 280px;
+    top: 315px;
+}
