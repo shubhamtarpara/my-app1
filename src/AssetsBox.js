@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AccordionContext } from "./Assests";
 
 import "./assetsbox.css";
@@ -23,6 +23,7 @@ const AssetsBox = (props ) => {
           {props.title}
           <div
             onClick={(e) => eventHandler(e, props.index)}
+            aria-controls={ 'sect-' + indexCount(props.index) }
             className={active === props.index ? "active" : "inactive"}
           >
             <div className={active === props.index ? "minus" : "plus"}></div>
