@@ -45,7 +45,7 @@ const AssetsBox = (props ) => {
               </div>
             </div>
             <div className="bar-container" >
-              <Bars bg={props.bg} />
+              <Bars bg={props.bg} background={props.background} />
               
             </div>
           </div>

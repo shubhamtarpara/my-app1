@@ -51,7 +51,9 @@
     width: 10px;
     height: 40px;
     background-color: green;
+    border: 1px solid black;
 }
+
 .green .tooltip {
     visibility: hidden;
     width: 176px;
@@ -78,13 +80,14 @@
     visibility: visible;
 }
 
-.red{
+.red {
     display: flex;
     position: relative;
     margin: 5px;
     width: 10px;
     height: 40px;
     background-color: rgb(255, 5, 5);
+    border: 1px solid black;
 }
 
 .red .tooltip {
@@ -113,13 +116,14 @@
     visibility: visible;
 }
 
-.yellow{
+.yellow {
     display: flex;
     position: relative;
     margin: 5px;
     width: 10px;
     height: 40px;
     background-color: yellow;
+    border: 1px solid black;
 }
 
 .yellow .tooltip {
@@ -148,3 +152,18 @@
     visibility: visible;
 }
 
+.first {
+    background-color: red !important;
+}
+
+.second {
+    background-color: rgb(255, 0, 0) !important;
+}
+
+.fifth {
+    background-color: yellow !important;
+}
+
+.third {
+    background-color: green !important;
+}

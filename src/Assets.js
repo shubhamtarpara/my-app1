@@ -6,8 +6,6 @@ import searchimg from "./search.png";
 // import SecondBar from "./SecondBar";
 
 const Assets = () => {
-
-
   const [search, setSearch] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
 
@@ -26,7 +24,7 @@ const Assets = () => {
       return asset?.name?.toLowerCase().includes(search?.toLowerCase());
     });
     setFilteredResults(results);
-  }, [search,]);
+  }, [search]);
 
   return (
     <>
@@ -44,10 +42,25 @@ const Assets = () => {
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
-            if (index === 0 || index === 1) {
+            if (index === 0 ) {
               return (
                 <>
                   <AssetsBox
+                    background="first fifth"
+                    bg="green"
+                    key={index}
+                    index={index}
+                    title={asset.title}
+                    name={asset.name}
+                  />
+                </>
+              );
+            }
+            if ( index === 1) {
+              return (
+                <>
+                  <AssetsBox
+                    background="first "
                     bg="green"
                     key={index}
                     index={index}
@@ -61,6 +74,7 @@ const Assets = () => {
               return (
                 <>
                   <AssetsBox
+                    background="second third "
                     bg="yellow"
                     key={index}
                     index={index}
@@ -73,6 +87,7 @@ const Assets = () => {
             return (
               <>
                 <AssetsBox
+                  background="third"
                   bg="red"
                   key={index}
                   index={index}

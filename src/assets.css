@@ -8,6 +8,7 @@
     margin: auto;
     width: 100%;
     max-width: 85%;  
+    margin-bottom: 50px;
 }
 .search-input input {
     position: relative;
