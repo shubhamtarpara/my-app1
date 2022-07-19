@@ -5,7 +5,7 @@ export const AccordionContext = createContext({
     setActive: () => {}
 });
 
-const AccordionWrapper = (props) => {
+const Assests = (props) => {
 
     const [active, setActive] = useState(0);
 
@@ -24,4 +24,4 @@ const AccordionWrapper = (props) => {
     )
 }
 
-export default AccordionWrapper; 
+export default Assests; 

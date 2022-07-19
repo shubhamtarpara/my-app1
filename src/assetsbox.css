@@ -78,7 +78,6 @@
     align-items: flex-end;
     justify-content: flex-end;
     width: 100%;
-    max-width: 78%;
 }
 
 .wrapper {
@@ -107,71 +106,74 @@
 
 }
 
-.status-bar-container.collapsed {
-    max-height: 0;
-    /* transition: max-height 0.25s ease-in; */
-    border: none;
-}
-
-.collapsed {
-    background-image: url(down.png);
-    background-repeat: no-repeat;
-}
-
-
 .accordion-title {   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:24px;
+    height: 55px;
+    padding-left: 30px;
+    padding-right: 10px;
+    color: white;
+    background-color: #3ba55c;
+    font-weight: 900;
+    border: solid 3px rgb(0, 0, 0);
     cursor: pointer;
-    border: solid 1px rgb(0, 0, 0);
-   
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    max-width: 85%;
 }
-
-.accordion-wrapper .accordion-item h3.accordion-title {
-    font-size: 1.75rem;
-    margin: 0;
+.minus {
+    content: url('../src/line.svg');
+    width: 24px;
+    height: 24px;
   }
   
-  .accordion-wrapper .accordion-item h3.accordion-title button {
+.plus {
+    content: url('../src/plus.svg');
+    width: 24px;
+    height: 24px;
+   
+  }
+.accordion-title button {
     position: relative;
     display: flex;
     align-items: center;
-    background: #c4c4c4;
-    border-radius: 1rem;
-    border: none;
+    justify-content: center;
+   
+    border: 1px solid black;
     font-size: 1.2rem;
     width: 30px ;
     text-align: left;
-    color: #ffffff;
+    
     font-weight: bold;
-    margin-top: 0.5rem;
-    padding: 1rem;
   }
-  
- 
-  
-  .accordion-wrapper .accordion-item .accordion-panel .panel-close { 
-    background: #e0e0e0;
+
+  .panel-close { 
     box-sizing: border-box;
     padding: 0.5rem 1rem 0 1rem;
     opacity:0;
     width:100%;
+    max-width: 85%;
     height:0;
+    margin: auto;
     overflow: hidden;
-    transition-timing-function: ease-out;
-    transition: all 1s;
+    margin-top: 10px;
   }
   
-  .accordion-wrapper .accordion-item .accordion-panel .panel-open {
-    overflow: hidden;
-    background: #e0e0e0;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    opacity:1;
-    width:100%;
-    height: auto;
-    transition-timing-function: ease-in;
-    transition: all 1s;
+ .panel-open {
+     overflow: hidden;
+     padding: 1rem;
+     margin-bottom: 1rem;
+     box-sizing: border-box;
+     opacity:1;
+     width:100%;
+     max-width: 85%;
+     height: auto;
+     margin-top: 10px;
+     margin: auto;
+     border: 3px solid black;
   }
   
   .accordion-wrapper .accordion-item .accordion-panel p {
