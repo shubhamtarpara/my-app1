@@ -6,12 +6,7 @@ import searchimg from "./search.png";
 // import SecondBar from "./SecondBar";
 
 const Assets = () => {
-  const assets = [
-    { title: "Assets", name: "Assets SVC" },
-    { title: "Services", name: "Services SVC" },
-    { title: "Online-service", name: "Online-service SVC" },
-    { title: "Pages", name: "Pages SVC" },
-  ];
+
 
   const [search, setSearch] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
@@ -21,11 +16,17 @@ const Assets = () => {
   };
 
   useEffect(() => {
+    const assets = [
+      { title: "Assets", name: "Assets SVC" },
+      { title: "Services", name: "Services SVC" },
+      { title: "Online-service", name: "Online-service SVC" },
+      { title: "Pages", name: "Pages SVC" },
+    ];
     const results = assets.filter((asset) => {
       return asset?.name?.toLowerCase().includes(search?.toLowerCase());
     });
     setFilteredResults(results);
-  }, [search]);
+  }, [search,]);
 
   return (
     <>
