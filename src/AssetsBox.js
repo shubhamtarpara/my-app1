@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AccordionContext } from "./Assests";
-import PropTypes from "prop-types";
+
 import "./assetsbox.css";
 import Bars from "./Bars";
 
@@ -53,9 +53,5 @@ const AssetsBox = (props) => {
   );
 };
 
-AssetsBox.propTypes = {
-  index: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+
 export default AssetsBox;
