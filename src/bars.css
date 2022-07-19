@@ -18,6 +18,14 @@
     background-color: green;
 }
 
+.status-bars{
+    display: flex;
+    position: relative;
+    margin: 5px;
+    width: 10px;
+    height: 40px;
+    background-color: rgb(255, 0, 0) !important; 
+}
 .bar-content .tooltip {
     visibility: hidden;
     width: 176px;
@@ -44,6 +52,41 @@
     visibility: visible;
 }
 
+
+.status-bars {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    width: 10px;
+    height: 40px;
+    background-color: green;
+}
+
+.status-bars .tooltip {
+    visibility: hidden;
+    width: 176px;
+    background: rgba(224, 224, 224, 1);
+    height: 61px;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -36px;
+    left: 50%;
+    margin-left: -60px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.status-bars:hover .tooltip {
+    visibility: visible;
+}
 
 .tooltip span h3 {
     font-size: 20px;

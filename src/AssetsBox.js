@@ -44,7 +44,8 @@ const AssetsBox = (props) => {
               </div>
             </div>
             <div className="bar-container" >
-              <Bars className="status-text" />
+              <Bars className="status-bars" />
+              
             </div>
           </div>
         </div>

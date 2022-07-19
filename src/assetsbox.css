@@ -154,3 +154,7 @@
     margin-bottom: 20px;
     border: 3px solid black;
 }
+
+.status-bars {
+    background-color: aqua;
+}
