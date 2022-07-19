@@ -43,15 +43,42 @@ const Assets = () => {
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
+            if (index === 0 || index === 1) {
+              return (
+                <>
+                  <AssetsBox
+                    bg="green"
+                    key={index}
+                    index={index}
+                    title={asset.title}
+                    name={asset.name}
+                  />
+                </>
+              );
+            }
+            if (index === 2) {
+              return (
+                <>
+                  <AssetsBox
+                    bg="yellow"
+                    key={index}
+                    index={index}
+                    title={asset.title}
+                    name={asset.name}
+                  />
+                </>
+              );
+            }
             return (
               <>
-              <AssetsBox
-                key={index}
-                index={index}
-                title={asset.title}
-                name={asset.name}
-              />
-       </>
+                <AssetsBox
+                  bg="red"
+                  key={index}
+                  index={index}
+                  title={asset.title}
+                  name={asset.name}
+                />
+              </>
             );
           })}
         </Assests>

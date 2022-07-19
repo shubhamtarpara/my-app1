@@ -4,7 +4,7 @@ import { AccordionContext } from "./Assests";
 import "./assetsbox.css";
 import Bars from "./Bars";
 
-const AssetsBox = (props) => {
+const AssetsBox = (props ) => {
   const { active, setActive } = useContext(AccordionContext);
 
   const eventHandler = (e, index) => {
@@ -44,7 +44,7 @@ const AssetsBox = (props) => {
               </div>
             </div>
             <div className="bar-container" >
-              <Bars className="status-bars" />
+              <Bars bg={props.bg} />
               
             </div>
           </div>

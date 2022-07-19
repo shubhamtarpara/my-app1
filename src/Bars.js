@@ -1,157 +1,157 @@
 import React from "react";
 import "./bars.css";
 
-const Bars = ({className}) => {
+const Bars = ({bg}) => {
   return (
     <div className="main-bar__container">
-      <div className={`bar-content ${className}`}>
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
           <p>No down time recorded</p>
         </span>
       </div>
-      <div className="bar-content">
+      <div className={`${bg}`}>
         <span className="tooltip">
           <h3>25 April, 2022</h3>
           <p>Uptime: 100%</p>
