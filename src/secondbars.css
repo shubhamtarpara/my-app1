@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,7 @@
     margin: 5px;
     width: 10px;
     height: 40px;
-    background-color: green;
+    background-color: yellow;
 }
 
 .bar-content .tooltip {
@@ -48,4 +48,4 @@
 .tooltip span h3 {
     font-size: 20px;
     padding-bottom: 10px;
-}
+} */

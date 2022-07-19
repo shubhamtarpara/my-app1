@@ -3,6 +3,7 @@ import AssetsBox from "./AssetsBox";
 import Assests from "./Assests";
 import "./assets.css";
 import searchimg from "./search.png";
+import SecondBar from "./SecondBar";
 
 const Assets = () => {
   const assets = [
@@ -43,12 +44,15 @@ const Assets = () => {
         <Assests>
           {filteredResults.map((asset, index) => {
             return (
+              <>
+    
               <AssetsBox
                 key={index}
                 index={index}
                 title={asset.title}
                 name={asset.name}
               />
+       </>
             );
           })}
         </Assests>

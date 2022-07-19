@@ -4,20 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
-.popup-container {
-    width: 100%;
-    max-width: 85%;
-    margin: auto;
-}
-
-.pop-up {
-    height: 100%;
-    margin-top: 30px;
-    /* border: 3px solid black; */
-}
-
 .main-assets-title {
     display: flex;
     height: 55px;
@@ -32,14 +18,11 @@
     display: flex;
     justify-content: space-around;
     width: 160px;
-
 }
 
 .button-assets button {
     width: 25px;
 }
-
-
 
 .status-text {
     margin: 0 54px 0px 33px;
@@ -62,7 +45,6 @@
 
 .open-time {
     display: flex;
-
 }
 
 .open-time p {
@@ -97,20 +79,18 @@
     background: white;
     color: black;
     max-height: 9999px;
-
 }
 
 .open {
     background-image: url(upload.png);
     background-repeat: no-repeat;
-
 }
 
-.accordion-title {   
+.accordion-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size:24px;
+    font-size: 24px;
     height: 55px;
     padding-left: 30px;
     padding-right: 10px;
@@ -124,58 +104,53 @@
     margin: auto;
     max-width: 85%;
 }
+
 .minus {
     content: url('../src/line.svg');
     width: 24px;
     height: 24px;
-  }
-  
+}
+
 .plus {
     content: url('../src/plus.svg');
     width: 24px;
     height: 24px;
-   
-  }
+
+}
+
 .accordion-title button {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-   
     border: 1px solid black;
     font-size: 1.2rem;
-    width: 30px ;
+    width: 30px;
     text-align: left;
-    
     font-weight: bold;
-  }
+}
 
-  .panel-close { 
+.panel-close {
     box-sizing: border-box;
     padding: 0.5rem 1rem 0 1rem;
-    opacity:0;
-    width:100%;
+    opacity: 0;
+    width: 100%;
     max-width: 85%;
-    height:0;
+    height: 0;
     margin: auto;
     overflow: hidden;
-    margin-top: 10px;
-  }
-  
- .panel-open {
-     overflow: hidden;
-     padding: 1rem;
-     margin-bottom: 1rem;
-     box-sizing: border-box;
-     opacity:1;
-     width:100%;
-     max-width: 85%;
-     height: auto;
-     margin-top: 10px;
-     margin: auto;
-     border: 3px solid black;
-  }
-  
-  .accordion-wrapper .accordion-item .accordion-panel p {
-    margin: 0;
-  }
+}
+
+.panel-open {
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 1;
+    width: 100%;
+    max-width: 85%;
+    height: auto;
+    margin: auto;
+
+    margin-bottom: 20px;
+    border: 3px solid black;
+}

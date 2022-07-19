@@ -43,8 +43,8 @@ const AssetsBox = (props) => {
                 <p>100%</p> &nbsp; &nbsp; <p>100ms</p>
               </div>
             </div>
-            <div className="bar-container">
-              <Bars />
+            <div className="bar-container" >
+              <Bars className="status-text" />
             </div>
           </div>
         </div>
