@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AssetsBox from "./AssetsBox";
+import AccordionWrapper from "./AccordionWrapper";
 import "./assets.css";
 import searchimg from "./search.png";
 
@@ -37,9 +38,11 @@ const Assets = () => {
           />
           <span><img src={searchimg} alt="search" /></span>
         </div>
-        {filteredResults.map((asset) => {
-          return <AssetsBox key={asset.name} title={asset.title} />;
+        <AccordionWrapper >
+        {filteredResults.map((asset,index) => {
+          return <AssetsBox key={index} index={index} title={asset.title} />;
         })}
+        </AccordionWrapper>
       </div>
     </>
   );
