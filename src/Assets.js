@@ -3,7 +3,7 @@ import AssetsBox from "./AssetsBox";
 import Assests from "./Assests";
 import "./assets.css";
 import searchimg from "./search.png";
-// import SecondBar from "./SecondBar";
+
 
 const Assets = () => {
   const [search, setSearch] = useState("");
@@ -42,7 +42,7 @@ const Assets = () => {
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
-            if (index === 0 ) {
+            if (index === 0) {
               return (
                 <>
                   <AssetsBox
@@ -56,7 +56,7 @@ const Assets = () => {
                 </>
               );
             }
-            if ( index === 1) {
+            if (index === 1) {
               return (
                 <>
                   <AssetsBox

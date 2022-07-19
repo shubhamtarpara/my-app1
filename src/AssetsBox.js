@@ -4,7 +4,7 @@ import { AccordionContext } from "./Assests";
 import "./assetsbox.css";
 import Bars from "./Bars";
 
-const AssetsBox = (props ) => {
+const AssetsBox = (props) => {
   const { active, setActive } = useContext(AccordionContext);
 
   const eventHandler = (e, index) => {
@@ -23,20 +23,23 @@ const AssetsBox = (props ) => {
           {props.title}
           <div
             onClick={(e) => eventHandler(e, props.index)}
-            aria-controls={ 'sect-' + indexCount(props.index) }
+            aria-controls={"sect-" + indexCount(props.index)}
             className={active === props.index ? "active" : "inactive"}
           >
             <div className={active === props.index ? "minus" : "plus"}></div>
           </div>
         </div>
         <div className="accordion-panel">
-          <div className={active === props.index ? "panel-open" : "panel-close"}>
+          <div
+            className={active === props.index ? "panel-open" : "panel-close"}
+          >
             <div className="status-text">
               <div className="status-bar-title">
                 <p>{props.name}</p>
               </div>
               <div className="status-bar__text">
                 <p>Uptime </p>
+                
                 <p>Avg</p>
                 <p>Rest time</p>
               </div>
@@ -44,9 +47,8 @@ const AssetsBox = (props ) => {
                 <p>100%</p> &nbsp; &nbsp; <p>100ms</p>
               </div>
             </div>
-            <div className="bar-container" >
+            <div className="bar-container">
               <Bars bg={props.bg} background={props.background} />
-              
             </div>
           </div>
         </div>
@@ -54,6 +56,5 @@ const AssetsBox = (props ) => {
     </>
   );
 };
-
 
 export default AssetsBox;

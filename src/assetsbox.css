@@ -38,6 +38,9 @@
     font-size: 18px;
     display: flex;
 }
+.status-bar__text p{
+    padding-right: 5px;
+}
 
 .status-bar__text h5 {
     padding-right: 10px;

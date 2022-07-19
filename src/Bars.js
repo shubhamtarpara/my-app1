@@ -1,7 +1,7 @@
 import React from "react";
 import "./bars.css";
 
-const Bars = ({bg, background}) => {
+const Bars = ({ bg, background }) => {
   return (
     <div className="main-bar__container">
       <div className={`${background} ${bg}`}>
