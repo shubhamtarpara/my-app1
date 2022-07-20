@@ -9,7 +9,7 @@
         "id": 2,
         "date": "12 April, 2022",
         "uptime": "100%",
-        "text": "Down time recorded"
+        "text": "No down time recorded"
     },
     {
         "id": 3,
@@ -21,13 +21,13 @@
         "id": 4,
         "date": "14 April, 2022",
         "uptime": "100%",
-        "text": "Down time recorded"
+        "text": "No down time recorded"
     },
     {
         "id": 5,
         "date": "15 April, 2022",
         "uptime": "80%",
-        "text": "No down time recorded"
+        "text": "Down time recorded"
     },
     {
         "id": 6,
@@ -39,7 +39,7 @@
         "id": 7,
         "date": "17 April, 2022",
         "uptime": "50%",
-        "text": "No down time recorded"
+        "text": "Down time recorded"
     },
     {
         "id": 8,
@@ -57,7 +57,7 @@
         "id": 10,
         "date": "20 April, 2022",
         "uptime": "100%",
-        "text": "Down time recorded"
+        "text": "No down time recorded"
     },
     {
         "id": 11,
@@ -69,13 +69,13 @@
         "id": 12,
         "date": "22 April, 2022",
         "uptime": "100%",
-        "text": "Down time recorded"
+        "text": "No down time recorded"
     },
     {
         "id": 13,
         "date": "23 April, 2022",
         "uptime": "100%",
-        "text": "Down time recorded"
+        "text": "No down time recorded"
     },
     {
         "id": 14,
