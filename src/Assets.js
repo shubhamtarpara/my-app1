@@ -36,7 +36,7 @@ const Assets = () => {
 
             placeholder="Search Here"
           />
-          <img className="search-icon" src={searchIcon} />
+          <img className="search-icon" alt="1" src={searchIcon} />
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
