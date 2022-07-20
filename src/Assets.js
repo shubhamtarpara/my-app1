@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AssetsBox from "./AssetsBox";
 import Assests from "./Assests";
 import "./assets.css";
-// import searchimg from "./search.png";
+import searchIcon from './search.png'
 
 const Assets = () => {
   const [search, setSearch] = useState("");
@@ -33,8 +33,10 @@ const Assets = () => {
             value={search}
             onChange={searchhandle}
             type="search"
+
             placeholder="Search Here"
           />
+          <img className="search-icon" src={searchIcon} />
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
