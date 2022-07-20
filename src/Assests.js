@@ -16,9 +16,9 @@ const Assests = (props) => {
             }}
         >
         <div className="accordion-wrapper">
-            <form>
+            
                 {props.children}
-            </form>
+            
         </div>
         </AccordionContext.Provider>
     )

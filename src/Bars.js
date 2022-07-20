@@ -1,164 +1,56 @@
 import React from "react";
 import "./bars.css";
+import Records from "./records.json";
+const Bars = () => {
 
-const Bars = ({ bg, background }) => {
+
+  const average = (records) => {
+    let sum = 0;
+    let count = 0;
+    records.forEach((record) => {
+      sum += parseInt(record.uptime);
+      count++;
+    });
+    return sum / count;
+  };
+
   return (
-    <div className="main-bar__container">
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
+    <>
+      <div className="main-bar-container">
+        <div className="status-bar__text">
+          <div className="uptime__text">
+            <h4>Uptime AVG </h4>
+            <p>{average(Records).toFixed(2)}%</p>
+          </div>
+          <div className="open-time">
+            <h4>Rest time</h4>
+            <p>100ms</p>
+          </div>
+        </div>
+
+        {Records?.map((record) => {
+          return (
+            <>
+              <div key={record.id}>
+                <div
+                  className={`bar-content ${
+                    record.uptime === "80%" && "yellowOne"
+                  } {bar-content ${
+                    record.uptime === "50%" && "redOne"
+                  } {bar-content ${record.uptime === "100%" && "greenOne"}`}
+                >
+                  <span className=" tooltip">
+                    <h3>{record.date}</h3>
+                    <p>{record.uptime}</p>
+                    <p>{record.text}</p>
+                  </span>
+                </div>
+              </div>
+            </>
+          );
+        })}
       </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-      <div className={`${background} ${bg}`}>
-        <span className="tooltip">
-          <h3>25 April, 2022</h3>
-          <p>Uptime: 100%</p>
-          <p>No down time recorded</p>
-        </span>
-      </div>
-    </div>
+    </>
   );
 };
 

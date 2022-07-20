@@ -37,14 +37,7 @@ const AssetsBox = (props) => {
               <div className="status-bar-title">
                 <p>{props.name}</p>
               </div>
-              <div className="status-bar__text">
-                <p>Uptime </p>
-                
-                <p>Avg</p>
-                <p>Rest time</p>
-              </div>
-              <div className="open-time">
-                <p>100%</p> &nbsp; &nbsp; <p>100ms</p>
+              <div className="time-status">
               </div>
             </div>
             <div className="bar-container">

@@ -24,39 +24,34 @@
     width: 25px;
 }
 
-.status-text {
-    margin: 0 54px 0px 33px;
+.time-status {
+    display: flex;
+    width: 162px;
+    justify-content: space-between;
+    margin-top: 10px;
+   
 }
 
 .status-bar-title {
     font-size: 24px;
     font-weight: 900;
 }
-
-.status-bar__text {
-    margin: 10px 0;
-    font-size: 18px;
-    display: flex;
+.status-bar-title p{
+    color: #ffffff;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
 }
-.status-bar__text p{
-    padding-right: 5px;
-}
-
-.status-bar__text h5 {
-    padding-right: 10px;
-}
-
 .open-time {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
 }
 
-.open-time p {
-    font-weight: 900;
+.open-time h4{
+    color: #000000;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
-.open-time h3 {
-    padding-right: 50px;
-}
 
 .bar-container {
     display: flex;
@@ -153,8 +148,8 @@
     max-width: 85%;
     height: auto;
     margin: auto;
-
     margin-bottom: 20px;
+ background-color: #d3d3d3;
     border: 3px solid black;
 }
 

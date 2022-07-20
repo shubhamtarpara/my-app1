@@ -2,23 +2,22 @@ import React, { useEffect, useState } from "react";
 import AssetsBox from "./AssetsBox";
 import Assests from "./Assests";
 import "./assets.css";
-import searchimg from "./search.png";
-
+// import searchimg from "./search.png";
 
 const Assets = () => {
   const [search, setSearch] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
 
-  const handleSearch = (e) => {
+  const searchhandle = (e) => {
     setSearch(e.target.value);
   };
 
   useEffect(() => {
     const assets = [
-      { title: "Assets", name: "Assets SVC" },
-      { title: "Services", name: "Services SVC" },
-      { title: "Online-service", name: "Online-service SVC" },
-      { title: "Pages", name: "Pages SVC" },
+      { title: "Assets", name: "Assets SVC", id: 1},
+      { title: "Services", name: "Services SVC", id: 2},
+      { title: "Online-service", name: "Online-service SVC", id: 3 },
+      { title: "Pages", name: "Pages SVC" , id: 4},
     ];
     const results = assets.filter((asset) => {
       return asset?.name?.toLowerCase().includes(search?.toLowerCase());
@@ -32,22 +31,18 @@ const Assets = () => {
         <div className="search-input">
           <input
             value={search}
-            onChange={handleSearch}
+            onChange={searchhandle}
             type="search"
             placeholder="Search Here"
           />
-          <span>
-            <img src={searchimg} alt="search" />
-          </span>
         </div>
         <Assests>
           {filteredResults.map((asset, index) => {
+           
             if (index === 0) {
               return (
                 <>
-                  <AssetsBox
-                    background="first fifth"
-                    bg="green"
+                  <AssetsBox               
                     key={index}
                     index={index}
                     title={asset.title}
@@ -60,8 +55,6 @@ const Assets = () => {
               return (
                 <>
                   <AssetsBox
-                    background="first "
-                    bg="green"
                     key={index}
                     index={index}
                     title={asset.title}
@@ -74,8 +67,6 @@ const Assets = () => {
               return (
                 <>
                   <AssetsBox
-                    background="second third "
-                    bg="yellow"
                     key={index}
                     index={index}
                     title={asset.title}
@@ -87,8 +78,6 @@ const Assets = () => {
             return (
               <>
                 <AssetsBox
-                  background="third"
-                  bg="red"
                   key={index}
                   index={index}
                   title={asset.title}

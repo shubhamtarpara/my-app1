@@ -7,6 +7,27 @@
 .main-bar__container {
     display: flex;
     justify-content: flex-end;
+
+}
+
+.status-bar__text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 18px;
+}
+
+.uptime__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.uptime__text h4 {
+    color: #000000;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .bar-content {
@@ -15,10 +36,10 @@
     margin: 5px;
     width: 10px;
     height: 40px;
-    background-color: green;
+    border: 1px solid black;
 }
 
-.bar-content .tooltip {
+.tooltip {
     visibility: hidden;
     width: 176px;
     background: rgba(224, 224, 224, 1);
@@ -44,126 +65,23 @@
     visibility: visible;
 }
 
-.green {
+
+.main-bar-container {
+    width: 100%;
+    margin: auto;
     display: flex;
-    position: relative;
-    margin: 5px;
-    width: 10px;
-    height: 40px;
-    background-color: green;
-    border: 1px solid black;
+    justify-content: flex-end;
 }
 
-.green .tooltip {
-    visibility: hidden;
-    width: 176px;
-    background: rgba(224, 224, 224, 1);
-    height: 61px;
-    color: black;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -36px;
-    left: 50%;
-    margin-left: -60px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
-.green:hover .tooltip {
-    visibility: visible;
-}
-
-.red {
-    display: flex;
-    position: relative;
-    margin: 5px;
-    width: 10px;
-    height: 40px;
-    background-color: rgb(255, 5, 5);
-    border: 1px solid black;
-}
-
-.red .tooltip {
-    visibility: hidden;
-    width: 176px;
-    background: rgba(224, 224, 224, 1);
-    height: 61px;
-    color: black;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -36px;
-    left: 50%;
-    margin-left: -60px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.red:hover .tooltip {
-    visibility: visible;
-}
-
-.yellow {
-    display: flex;
-    position: relative;
-    margin: 5px;
-    width: 10px;
-    height: 40px;
-    background-color: yellow;
-    border: 1px solid black;
-}
-
-.yellow .tooltip {
-    visibility: hidden;
-    width: 176px;
-    background: rgba(224, 224, 224, 1);
-    height: 61px;
-    color: black;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -36px;
-    left: 50%;
-    margin-left: -60px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.yellow:hover .tooltip {
-    visibility: visible;
-}
-
-.first {
-    background-color: red !important;
-}
-
-.second {
-    background-color: rgb(255, 0, 0) !important;
-}
-
-.fifth {
+.yellowOne {
     background-color: yellow !important;
 }
 
-.third {
+.redOne {
+    background-color: red !important;
+}
+
+.greenOne {
     background-color: green !important;
 }
