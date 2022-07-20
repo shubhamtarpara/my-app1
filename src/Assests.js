@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react';
-
+import './assests.css'
 export const AccordionContext = createContext({
     active: 0,
     setActive: () => {}

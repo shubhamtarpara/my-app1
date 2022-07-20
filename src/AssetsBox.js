@@ -32,16 +32,16 @@ const AssetsBox = (props) => {
         <div className="accordion-panel">
           <div
             className={active === props.index ? "panel-open" : "panel-close"}
-          >
+          > <div className="status-bar-title">
+          <h5>{props.name}</h5>
+          <p>Operational</p>
+        </div>
             <div className="status-text">
-              <div className="status-bar-title">
-                <p>{props.name}</p>
-              </div>
-              <div className="time-status">
-              </div>
-            </div>
-            <div className="bar-container">
-              <Bars bg={props.bg} background={props.background} />
+             
+            
+            {/* <div className="bar-container"> */}
+              <Bars  />
+            {/* </div> */}
             </div>
           </div>
         </div>

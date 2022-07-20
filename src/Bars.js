@@ -2,8 +2,6 @@ import React from "react";
 import "./bars.css";
 import Records from "./records.json";
 const Bars = () => {
-
-
   const average = (records) => {
     let sum = 0;
     let count = 0;
@@ -17,17 +15,6 @@ const Bars = () => {
   return (
     <>
       <div className="main-bar-container">
-        <div className="status-bar__text">
-          <div className="uptime__text">
-            <h4>Uptime AVG </h4>
-            <p>{average(Records).toFixed(2)}%</p>
-          </div>
-          <div className="open-time">
-            <h4>Rest time</h4>
-            <p>100ms</p>
-          </div>
-        </div>
-
         {Records?.map((record) => {
           return (
             <>
@@ -49,6 +36,17 @@ const Bars = () => {
             </>
           );
         })}
+      </div>
+
+      <div className="status-bar__text">
+        <div className="uptime__text">
+          <h4>Uptime AVG : </h4>
+          <p> &nbsp;{average(Records).toFixed(2)}%</p>
+        </div>
+        <div className="open-time">
+          <h4>Rest time : </h4>
+          <p>&nbsp;100ms</p>
+        </div>
       </div>
     </>
   );
