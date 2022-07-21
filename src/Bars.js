@@ -15,6 +15,7 @@ const Bars = () => {
   return (
     <>
       <div className="main-bar-container">
+        
         {Records?.map((record) => {
           return (
             <>
@@ -39,13 +40,17 @@ const Bars = () => {
       </div>
 
       <div className="status-bar__text">
-        <div className="uptime__text">
-          <h4>Uptime AVG : </h4>
-          <p> &nbsp;{average(Records).toFixed(2)}%</p>
+        <div className="times-days">
+          <p>60 days ago</p>
         </div>
+        <div className="space"></div>
+        <div className="uptime__text">
+          <p>Uptime AVG : </p>
+          <h4> &nbsp;{average(Records).toFixed(2)}%</h4>
+        </div>
+        <div className="space"></div>
         <div className="open-time">
-          <h4>Rest time : </h4>
-          <p>&nbsp;100ms</p>
+          <p>Today</p>
         </div>
       </div>
     </>
