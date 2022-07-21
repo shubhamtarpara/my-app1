@@ -75,13 +75,26 @@
     position: absolute;
     z-index: 1;
     top: -65px;
-    left: -100%;
+    right: -18px;
     margin-left: -60px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
     align-items: flex-start;
     flex-direction: column;
+}
+.tooltip h5{
+    font-weight: 900;
+}
+.tooltip .record-title{
+    font-weight: 700;
+}
+.tooltip p{
+    font-weight: 400;
+}
+
+.tooltip-left{
+    left: 42px;
 }
 
 .bar-content:hover .tooltip {
