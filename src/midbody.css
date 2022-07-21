@@ -5,21 +5,38 @@
 }
 
 .mid-container {
-    width: 100%;
-    max-width: 45%;
+    width: 833px;
+    max-width: 90%;
     margin: auto;
     margin-top: 50px;
 }
+.service h3 {
+    padding-left: 12px;
+    font-size: 24px;
+}
 @media only screen and (max-width: 1400px){
-    .mid-container{
-        max-width: 61%;
+    .mid-container {
+        max-width: 60%;
     }
 }
-@media only screen and (max-width: 1200px){
-    .mid-container{
-        max-width: 71%;
+
+@media only screen and (max-width: 1200px) {
+    .mid-container {
+        max-width: 75%;
     }
 }
+
+@media only screen and (max-width: 992px) {
+    .mid-container {
+        max-width: 90%;
+    }
+}
+@media only screen and (max-width: 464px) {
+    .service h3 {
+        font-size: 20px;
+    }
+}
+
 .service {
     display: flex;
     height: 55px;
@@ -38,8 +55,4 @@
     width: 33px;
     height: 33px;
     color: white;
-}
-.service h3 {
-    padding-left: 12px;
-    font-size: 24px;
 }

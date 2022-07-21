@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.main-bar__container {
-    display: flex;
-    justify-content: flex-end;
-
-}
-
 .status-bar__text {
     color: #aaa;
     margin-top: 10px;
@@ -22,7 +16,7 @@
 .uptime__text {
     display: flex;
     align-items: center;
-    
+
 }
 
 .uptime__text h4 {
@@ -32,7 +26,7 @@
 .open-time {
     display: flex;
     align-items: center;
-    
+
 }
 
 .space {
@@ -49,6 +43,23 @@
     margin: 3px;
     width: 10px;
     height: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .bar-content{
+        margin: 2px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .bar-content{
+        margin: 2px;
+    }
+}
+
+@media only screen and (max-width: 464px) {
+    .bar-content{
+        margin: 1px;
+    }
 }
 
 .tooltip {
@@ -87,6 +98,7 @@
 }
 
 
+
 .yellowOne {
     background-color: yellow !important;
 }
@@ -96,5 +108,5 @@
 }
 
 .greenOne {
-    background-color: #3ba55c!important;
+    background-color: #3ba55c !important;
 }

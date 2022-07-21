@@ -7,34 +7,31 @@
 .search-input {
     position: relative;
     margin: auto;
-    width: 100%;
-    max-width: 45%;
+    width: 833px;
+    max-width: 90%;
     margin-bottom: 50px;
 }
 
+
 @media only screen and (max-width: 1400px) {
-    @media only screen and (max-width: 1400px) {
-        .search-input {
-            max-width: 61%;
-        }
-    }
-
-    @media only screen and (max-width: 1200px) {
-        .search-input {
-            max-width: 70%;
-        }
-    }
-
-    r {
-        max-width: 61%;
+    .search-input {
+        max-width: 60%;
     }
 }
+
 
 @media only screen and (max-width: 1200px) {
-    .accordion-wrapper {
-        max-width: 70%;
+    .search-input {
+        max-width: 75%;
     }
 }
+
+@media only screen and (max-width: 992px) {
+    .search-input {
+        max-width: 90%;
+    }
+}
+
 
 
 .search-input input {
