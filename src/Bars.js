@@ -39,7 +39,7 @@ const Bars = () => {
 
       <div className="status-bar__text">
         <div className="times-days">
-          <p>0 days ago</p>
+          <p>50 days ago</p>
         </div>
         <div className="space"></div>
         <div className="uptime__text">
