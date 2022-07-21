@@ -1,6 +1,18 @@
 .accordion-wrapper{
     width: 100%;
     border: 1px solid #E0E0E0;
-    max-width: 85%;
+    border-radius: 5px;
+    max-width: 45%;
     margin: auto;
 }
+@media only screen and (max-width: 1400px){
+    .accordion-wrapper{
+        max-width: 61%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .accordion-wrapper{
+        max-width: 70%;
+    }
+}
+

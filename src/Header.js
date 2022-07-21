@@ -1,16 +1,16 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "./header.css";
 
 const Header = () => {
 
-  // const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
-  // useEffect(() => {
-  //       const timer = setInterval(() =>setDate(new Date()), 1000);
-  //       return function cleanup() {
-  //         clearInterval(timer);
-  //       }
-  // })
+  useEffect(() => {
+        const timer = setInterval(() =>setDate(new Date()), 1000);
+        return function cleanup() {
+          clearInterval(timer);
+        }
+  })
   return (
     <>
       <div className="main-container">
@@ -22,15 +22,15 @@ const Header = () => {
             </div>
             <div className="data-time">
               <h4>Last Updated: 22ms</h4> 
-              <h4>25/04/2022 3:10PM</h4>
+              <h4>{date.toLocaleTimeString()}&nbsp; {date.toLocaleDateString()}</h4>
             </div>
           </div>
 
-          <div className="header-bottom">
+          {/* <div className="header-bottom">
             <div className="header-box">Development</div>
             <div className="header-box">Stage</div>
             <div className="header-box">Production</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

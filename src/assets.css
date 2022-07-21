@@ -8,9 +8,34 @@
     position: relative;
     margin: auto;
     width: 100%;
-    max-width: 85%;
+    max-width: 45%;
     margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: 1400px) {
+        .search-input {
+            max-width: 61%;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .search-input {
+            max-width: 70%;
+        }
+    }
+
+    r {
+        max-width: 61%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .accordion-wrapper {
+        max-width: 70%;
+    }
+}
+
 
 .search-input input {
     width: 100%;
@@ -18,7 +43,8 @@
     font-size: 22px;
     padding-left: 55px;
     background: lightgray;
-    border: 3px solid black;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
 }
 
 .search-input span {
@@ -31,6 +57,6 @@
     position: absolute;
     right: 20px;
     left: 15px;
-    bottom: 12px;
+    bottom: 15px;
 
 }

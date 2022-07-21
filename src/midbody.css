@@ -6,21 +6,29 @@
 
 .mid-container {
     width: 100%;
-    max-width: 85%;
+    max-width: 45%;
     margin: auto;
     margin-top: 50px;
 }
-
+@media only screen and (max-width: 1400px){
+    .mid-container{
+        max-width: 61%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .mid-container{
+        max-width: 71%;
+    }
+}
 .service {
-    width: 100%;
-    max-width: 85%;
     display: flex;
     height: 55px;
     justify-content: flex-start;
     align-items: center;
     margin: auto;
     margin-bottom: 30px;
-    border: 3px solid black;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
     padding: 30px;
     background: #3ba55c;
     color: white;
@@ -32,6 +40,6 @@
     color: white;
 }
 .service h3 {
-    padding-left: 40px;
+    padding-left: 12px;
     font-size: 24px;
 }

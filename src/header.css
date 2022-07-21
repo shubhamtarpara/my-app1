@@ -5,9 +5,11 @@
 }
 
 .main-container {
-    border: 3px solid black;
+    background: #5865f2;
+    color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
+    text-shadow: 4px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
 .sub-container {
@@ -20,7 +22,7 @@
 .header-top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 .header-top h1{
     margin-bottom: 5px;
@@ -37,7 +39,7 @@
     width: 100%;
     max-width: 95%;
 }
-.header-box{
+/* .header-box{
     width: 33%;
     height: 35px;
     display: flex;
@@ -45,6 +47,7 @@
     align-items: center;
     font-size: 24px;
     font-weight: 600;
-    border: 2px solid black;
-}
+    color: black;
+  background-color: aliceblue;
+} */
 

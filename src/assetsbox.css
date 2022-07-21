@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-.accordion-item {}
-
 .main-assets-title {
     display: flex;
     height: 55px;
@@ -41,24 +39,15 @@
 }
 
 .status-bar-title p {
-    color: #3ba55c;
+    color: #3BA55C;
+    font-size: 0.875rem;
 }
 .status-bar-title h5 {
     color: #000000;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 16px;
 
 }
-.open-time {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-}
-
-.open-time h4 {
-    color: #000000;
-}
-
 
 .bar-container {
     display: flex;
@@ -109,6 +98,7 @@
 
 .accordion-title:hover {
     color: white;
+    border: 3px solid #E0E0E0;
     background-color: black;
 }
 
@@ -147,17 +137,12 @@
     margin: auto;
     overflow: hidden;
 }
-.status-text{
-    margin-top: 36px;
-    height: 120px;
-}
+
 .panel-open {
     overflow: hidden;
     padding: 1rem 1rem 1rem 1rem;
-   
     box-sizing: border-box;
     opacity: 1;
-    height: 173px;
     margin: auto;
     border-bottom: 1px solid #E0E0E0;
 }
