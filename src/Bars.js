@@ -24,11 +24,20 @@ const Bars = () => {
                   record.uptime === "80%" && "yellowOne"
                 } {bar-content ${
                   record.uptime === "50%" && "redOne"
-                } {bar-content ${record.uptime === "100%" && "greenOne"}`}>
-                <span className={`tooltip ${record.id < 11 && record.id <45 ? "tooltip-left" : record.id > 45 ? "tooltip-right" : ""}`}>                  
-                    <h5>{record.date}</h5>
-                    <p className="record-title">{record.uptime}</p>
-                    <p>{record.text}</p>
+                } {bar-content ${record.uptime === "100%" && "greenOne"}`}
+              >
+                <span
+                  className={`tooltip ${
+                    record.id < 22 && record.id < 45
+                      ? "tooltip-left"
+                      : record.id > 45
+                      ? "tooltip-right"
+                      : ""
+                  }`}
+                >
+                  <h5>{record.date}</h5>
+                  <p className="record-title">{record.uptime}</p>
+                  <p>{record.text}</p>
                 </span>
               </div>
             </>
