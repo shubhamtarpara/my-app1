@@ -1,47 +1,30 @@
-import React, { useContext } from "react";
-import { AccordionContext } from "./Assests";
+import React from "react";
 
 import "./assetsbox.css";
 import Bars from "./Bars";
 
 const AssetsBox = (props) => {
-  const { active, setActive } = useContext(AccordionContext);
-
-  const eventHandler = (e, index) => {
-    setActive(index);
-  };
-
-  let indexPlus;
-  const indexCount = (index) => {
-    indexPlus = index + 1;
-    return indexPlus;
-  };
   return (
     <>
       <div className="accordion-item">
         <div
-          onClick={(e) => eventHandler(e, props.index)}
-          aria-controls={"sect-" + indexCount(props.index)}
-          className={active === props.index ? "active" : "inactive"}
+          onClick={(e) => props.setIsActive(props.index)}
+          className={props.isActive ? "active" : "inactive"}
         >
           <div className="accordion-title">
             {props.title}
-            <div className={active === props.index ? "minus" : "plus"}></div>
+            <div className={props.isActive ? "minus" : "plus"}></div>
           </div>
         </div>
         <div className="accordion-panel">
-          <div
-            className={active === props.index ? "panel-open" : "panel-close"}
-          >
+          <div className={props.isActive ? "panel-open" : "panel-close"}>
             {" "}
             <div className="status-bar-title">
               <h5>{props.name}</h5>
               <p>Operational</p>
             </div>
             <div className="status-text">
-              {/* <div className="bar-container"> */}
               <Bars />
-              {/* </div> */}
             </div>
           </div>
         </div>
