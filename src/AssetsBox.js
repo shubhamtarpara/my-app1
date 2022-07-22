@@ -19,29 +19,29 @@ const AssetsBox = (props) => {
   return (
     <>
       <div className="accordion-item">
-        <div className="accordion-title">
-          {props.title}
-          <div
-            onClick={(e) => eventHandler(e, props.index)}
-            aria-controls={"sect-" + indexCount(props.index)}
-            className={active === props.index ? "active" : "inactive"}
-          >
+        <div
+          onClick={(e) => eventHandler(e, props.index)}
+          aria-controls={"sect-" + indexCount(props.index)}
+          className={active === props.index ? "active" : "inactive"}
+        >
+          <div className="accordion-title">
+            {props.title}
             <div className={active === props.index ? "minus" : "plus"}></div>
           </div>
         </div>
         <div className="accordion-panel">
           <div
             className={active === props.index ? "panel-open" : "panel-close"}
-          > <div className="status-bar-title">
-          <h5>{props.name}</h5>
-          <p>Operational</p>
-        </div>
+          >
+            {" "}
+            <div className="status-bar-title">
+              <h5>{props.name}</h5>
+              <p>Operational</p>
+            </div>
             <div className="status-text">
-             
-            
-            {/* <div className="bar-container"> */}
-              <Bars  />
-            {/* </div> */}
+              {/* <div className="bar-container"> */}
+              <Bars />
+              {/* </div> */}
             </div>
           </div>
         </div>
