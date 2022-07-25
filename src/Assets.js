@@ -17,7 +17,7 @@ const Assets = () => {
       { title: "Assets", name: "Assets SVC", secondName: "Assets View",id: 1 },
       { title: "Services", name: "Services SVC ", id: 2, secondName:"Services View"},
       { title: "Online-service", name: "Online-service SVC", id: 3, secondName:"Online-service View" },
-      { title: "Pages", name: "Pages View", id: 4, secondName:"Pages VSC" },
+      { title: "Pages", name: "Pages SVC", id: 4, secondName:"Pages View" },
     ];
     const results = assets.filter((asset) => {
       return asset?.name?.toLowerCase().includes(search?.toLowerCase());
