@@ -47,35 +47,109 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .bar-content{
+    .bar-content {
         margin: 2px;
     }
 }
+
 @media only screen and (max-width: 576px) {
-    .bar-content{
+    .bar-content {
         margin: 2px;
     }
 }
 
 @media only screen and (max-width: 464px) {
-    .bar-content{
+    .bar-content {
         margin: 1px;
     }
 }
 
+.tooltip-left-22 {
+    left: 42px;
+}
+/* 
+.tooltip-right {
+   
+} */
+
+.tooltip-arrow-left {
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+
+.tooltip-arrow-left:after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    top: 74%;
+    left: 31px;
+    margin-left: -15px;
+    content: '';
+    margin-top: 15px;
+    transform: rotate(45deg);
+    background: white;
+    
+}
+
+.tooltip-arrow-right {
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+
+/* .tooltip-arrow-center{
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+.tooltip-arrow-center::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 0px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0px solid black;
+    top: 74%;
+    left: 0;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: 15px;
+    background: white;
+
+} */
+.tooltip-arrow-right::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 0px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0px solid black;
+    top: 74%;
+    left: 182px;
+    margin-left: -15px;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: 15px;
+    background: white;
+
+}
+
 .tooltip {
     visibility: hidden;
-    width: 176px;
-    background: rgba(224, 224, 224, 1);
-    height: 61px;
+    width: 196px;
+    background: rgb(255, 255, 255);
+    height: 80px;
     color: black;
-    border: 1px solid black;
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: -65px;
+    top: -90px;
     right: -18px;
     margin-left: -60px;
     display: flex;
@@ -84,19 +158,23 @@
     align-items: flex-start;
     flex-direction: column;
 }
-.tooltip h5{
+
+
+.tooltip h5 {
     font-weight: 900;
-}
-.tooltip .record-title{
-    font-weight: 700;
-}
-.tooltip p{
-    font-weight: 400;
+    padding: 5px;
 }
 
-.tooltip-left{
-    left: 42px;
+.tooltip .record-title {
+    font-weight: 700;
+    padding: 5px;
 }
+
+.tooltip p {
+    font-weight: 400;
+    padding: 5px;
+}
+
 
 .bar-content:hover .tooltip {
     visibility: visible;

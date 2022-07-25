@@ -6,7 +6,7 @@ const Header = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-        const timer = setInterval(() =>setDate(new Date()), 1000);
+        const timer = (() =>setDate(new Date()));
         return function cleanup() {
           clearInterval(timer);
         }
@@ -21,8 +21,8 @@ const Header = () => {
               <h4>Development | Stage | Production</h4>
             </div>
             <div className="data-time">
-              <h4>Last Updated: 22ms</h4> 
-              <h4>{date.toLocaleTimeString()}&nbsp; {date.toLocaleDateString()}</h4>
+              <h4>Last Updated:&nbsp;{date.toLocaleTimeString()}</h4> 
+              {/* <h4>{date.toLocaleDateString()}</h4> */}
             </div>
           </div>
 
