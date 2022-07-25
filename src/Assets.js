@@ -14,10 +14,10 @@ const Assets = () => {
 
   useEffect(() => {
     const assets = [
-      { title: "Assets", name: "Assets SVC", id: 1 },
-      { title: "Services", name: "Services SVC", id: 2 },
-      { title: "Online-service", name: "Online-service SVC", id: 3 },
-      { title: "Pages", name: "Pages SVC", id: 4 },
+      { title: "Assets", name: "Assets SVC", secondName: "Assets View",id: 1 },
+      { title: "Services", name: "Services SVC ", id: 2, secondName:"Services View"},
+      { title: "Online-service", name: "Online-service SVC", id: 3, secondName:"Online-service View" },
+      { title: "Pages", name: "Pages View", id: 4, secondName:"Pages VSC" },
     ];
     const results = assets.filter((asset) => {
       return asset?.name?.toLowerCase().includes(search?.toLowerCase());
@@ -57,6 +57,7 @@ const Assets = () => {
                     setIsActive={setIsActive}
                     title={asset.title}
                     name={asset.name}
+                    secondName={asset.secondName}
                   />
                 </>
               );
@@ -71,6 +72,7 @@ const Assets = () => {
                     setIsActive={setIsActive}
                     title={asset.title}
                     name={asset.name}
+                    secondName={asset.secondName}
                   />
                 </>
               );
@@ -85,6 +87,7 @@ const Assets = () => {
                     setIsActive={setIsActive}
                     title={asset.title}
                     name={asset.name}
+                    secondName={asset.secondName}
                   />
                 </>
               );
@@ -98,6 +101,7 @@ const Assets = () => {
                   setIsActive={setIsActive}
                   title={asset.title}
                   name={asset.name}
+                  secondName={asset.secondName}
                 />
               </>
             );

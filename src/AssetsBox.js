@@ -16,9 +16,10 @@ const AssetsBox = (props) => {
             <div className={props.isActive ? "minus" : "plus"}></div>
           </div>
         </div>
+
+
         <div className="accordion-panel">
           <div className={props.isActive ? "panel-open" : "panel-close"}>
-            {" "}
             <div className="status-bar-title">
               <h5>{props.name}</h5>
               <p>Operational</p>
@@ -28,7 +29,20 @@ const AssetsBox = (props) => {
             </div>
           </div>
         </div>
+
+        <div className="accordion-panel">
+          <div className={props.isActive ? "panel-open border-bottom" : "panel-close"}>
+            <div className="status-bar-title">
+              <h5>{props.secondName}</h5>
+              <p>Operational</p>
+            </div>
+            <div className="status-text">
+              <Bars />
+            </div>
+          </div>
+        </div>
       </div>
+      
     </>
   );
 };

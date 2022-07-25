@@ -33,6 +33,7 @@
 .space {
     flex: 1;
     height: 1px;
+    margin: 0 10px;
     background: #72767d;
     opacity: 0.3;
 }

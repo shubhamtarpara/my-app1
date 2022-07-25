@@ -91,6 +91,7 @@
     color: white;
     font-weight: 900;
     color: #000;
+    border-top: 1px solid #E0E0E0;
     border-bottom: 1px solid #E0E0E0;
     cursor: pointer;
     align-items: center;
@@ -139,13 +140,19 @@
 }
 
 .panel-open {
+    border: 1px solid;
+    border-radius: 3px;
     overflow: hidden;
     padding: 1rem 1rem 1rem 1rem;
     box-sizing: border-box;
     opacity: 1;
     margin: auto;
-    border-bottom: 1px solid #E0E0E0;
+    margin: 10px;
 }
+/* 
+.border-bottom{
+    border-bottom: 1px solid #E0E0E0 !important;
+} */
 
 .status-bars {
     background-color: aqua;
