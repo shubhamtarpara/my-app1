@@ -55,4 +55,5 @@
 .data-time h4{
     display: flex;
     justify-self: flex-end;
+    font-size: larger;
 }
