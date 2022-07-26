@@ -67,10 +67,6 @@
 .tooltip-left-22 {
     left: 42px;
 }
-/* 
-.tooltip-right {
-   
-} */
 
 .tooltip-arrow-left {
     border: 1px solid black;
@@ -78,7 +74,7 @@
     position: relative;
 }
 
-.tooltip-arrow-left:after {
+/* .tooltip-arrow-left:after {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -91,7 +87,85 @@
     margin-top: 15px;
     transform: rotate(45deg);
     background: white;
-    
+} */
+.tooltip-arrow-left:after, .tooltip-arrow-left:before {
+	top: 100%;
+	left: 12%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltip-arrow-left:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -7px;
+}
+.tooltip-arrow-left:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #000000;
+	border-width: 9px;
+	margin-left: -8px;
+}
+
+
+.tooltip-center-22 {
+    left: -29px;
+}
+
+.tooltip-arrow-center {
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+
+/* .tooltip-arrow-center::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 0px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0px solid black;
+    top: 74%;
+    left: calc(50% - 5px);
+    content: '';
+    transform: rotate(45deg);
+    margin-top: 15px;
+    background: white;
+} */
+
+.tooltip-arrow-center:after, .tooltip-arrow-center:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltip-arrow-center:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -7px;
+}
+.tooltip-arrow-center:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #000000;
+	border-width: 9px;
+	margin-left: -8px;
+}
+
+
+.tooltip-right-22 {
+    right: -18px;
 }
 
 .tooltip-arrow-right {
@@ -100,12 +174,7 @@
     position: relative;
 }
 
-/* .tooltip-arrow-center{
-    border: 1px solid black;
-    border-radius: 3px;
-    position: relative;
-}
-.tooltip-arrow-center::after {
+/* .tooltip-arrow-right::after {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -114,34 +183,41 @@
     border-bottom: 1px solid black;
     border-left: 0px solid black;
     top: 74%;
-    left: 0;
-    content: '';
-    transform: rotate(45deg);
-    margin-top: 15px;
-    background: white;
-
-} */
-.tooltip-arrow-right::after {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-top: 0px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 0px solid black;
-    top: 74%;
-    left: 182px;
+    left: 170.5px;
     margin-left: -15px;
     content: '';
     transform: rotate(45deg);
     margin-top: 15px;
     background: white;
+} */
 
+.tooltip-arrow-right:after, .tooltip-arrow-right:before {
+    top: 100%;
+    left: 159.5px;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltip-arrow-right:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -7px;
+}
+.tooltip-arrow-right:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #000000;
+	border-width: 9px;
+	margin-left: -8px;
 }
 
 .tooltip {
     visibility: hidden;
-    width: 196px;
+    width: 184px;
     background: rgb(255, 255, 255);
     height: 80px;
     color: black;
@@ -150,7 +226,7 @@
     position: absolute;
     z-index: 1;
     top: -90px;
-    right: -18px;
+
     margin-left: -60px;
     display: flex;
     justify-content: space-evenly;

@@ -27,11 +27,13 @@ const Bars = () => {
                 } {bar-content ${record.uptime === "100%" && "greenOne"}`}
               >
                 <span
-                  className={` tooltip ${
-                    record.id < 26 && record.id
+                  className={`tooltip ${
+                    record.id < 17 && record.id
                       ? "tooltip-left-22 tooltip-arrow-left"
-                      : record.id > 25
-                      ? "tooltip-right tooltip-arrow-right"
+                      : record.id >= 17 && record.id <= 35
+                      ? "tooltip-center-22 tooltip-arrow-center"
+                      : record.id > 35
+                      ? "tooltip-right-22 tooltip-arrow-right"
                       : ""
                   }`}
                 >
