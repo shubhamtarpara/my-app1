@@ -1,9 +1,9 @@
 import React from "react";
-
 import "./assetsbox.css";
 import Bars from "./Bars";
 
 const AssetsBox = (props) => {
+  console.log(props);
   return (
     <>
       <div className="accordion-item">
@@ -17,32 +17,22 @@ const AssetsBox = (props) => {
           </div>
         </div>
 
-
-        <div className="accordion-panel">
-          <div className={props.isActive ? "panel-open" : "panel-close"}>
-            <div className="status-bar-title">
-              <h5>{props.name}</h5>
-              <p>Operational</p>
+        {props.data.map((data) => {
+          return (
+            <div className="accordion-panel">
+              <div className={props.isActive ? "panel-open" : "panel-close"}>
+                <div className="status-bar-title">
+                  <h5>{data.title} </h5>
+                  <p>Operational</p>
+                </div>
+                <div className="status-text">
+                  <Bars data={data.jsonData} />
+                </div>
+              </div>
             </div>
-            <div className="status-text">
-              <Bars />
-            </div>
-          </div>
-        </div>
-
-        <div className="accordion-panel">
-          <div className={props.isActive ? "panel-open border-bottom" : "panel-close"}>
-            <div className="status-bar-title">
-              <h5>{props.secondName}</h5>
-              <p>Operational</p>
-            </div>
-            <div className="status-text">
-              <Bars />
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
-      
     </>
   );
 };

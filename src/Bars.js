@@ -1,7 +1,7 @@
 import React from "react";
 import "./bars.css";
-import Records from "./records.json";
-const Bars = () => {
+
+const Bars = ({data}) => {
   const average = (records) => {
     let sum = 0;
     let count = 0;
@@ -11,11 +11,12 @@ const Bars = () => {
     });
     return sum / count;
   };
+  // console.log(Records)
 
   return (
     <>
       <div className="main-bar-container">
-        {Records?.map((record) => {
+        {data?.map((record) => {
           return (
             <>
               <div
@@ -28,7 +29,7 @@ const Bars = () => {
               >
                 <span
                   className={`tooltip ${
-                    record.id < 17 && record.id
+                    record.id < 17 
                       ? "tooltip-left-22 tooltip-arrow-left"
                       : record.id >= 17 && record.id <= 35
                       ? "tooltip-center-22 tooltip-arrow-center"
@@ -54,7 +55,7 @@ const Bars = () => {
         <div className="space"></div>
         <div className="uptime__text">
           <p>Uptime AVG : </p>
-          <h4> &nbsp;{average(Records).toFixed(2)}%</h4>
+          <h4> &nbsp;{average(data).toFixed(2)}%</h4>
         </div>
         <div className="space"></div>
         <div className="open-time">

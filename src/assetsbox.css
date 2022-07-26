@@ -67,7 +67,7 @@
     justify-content: space-around;
     margin: 10px 0;
     border: 2px solid black;
-    overflow: hidden;
+ 
     /* transition: max-height 0.15s ease-out; */
     height: auto;
     background: white;
@@ -149,7 +149,7 @@
     padding: 1rem 1rem 1rem 1rem;
     box-sizing: border-box;
     opacity: 1;
-    height: 194px;
+    height: 180px;
     margin: auto;
     margin: 10px;
 }
@@ -158,6 +158,3 @@
     border-bottom: 1px solid #E0E0E0 !important;
 } */
 
-.status-bars {
-    background-color: aqua;
-}

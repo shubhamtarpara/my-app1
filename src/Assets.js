@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import AssetsBox from "./AssetsBox";
 import "./assets.css";
 import searchIcon from "./search.png";
+import Records from "./records.json";
 
 const Assets = () => {
   const [search, setSearch] = useState("");
@@ -14,13 +15,37 @@ const Assets = () => {
 
   useEffect(() => {
     const assets = [
-      { title: "Assets", name: "Assets SVC", secondName: "Assets View",id: 1 },
-      { title: "Services", name: "Services SVC ", id: 2, secondName:"Services View"},
-      { title: "Online-service", name: "Online-service SVC", id: 3, secondName:"Online-service View" },
-      { title: "Pages", name: "Pages SVC", id: 4, secondName:"Pages View" },
+      {
+        title: "Assets",
+        data: [
+          { title: "Assets SVC", jsonData: Records },
+          { title: "Assets View", jsonData: Records },
+        ],
+      },
+      {
+        title: "Services",
+        data: [
+          { title: "Services SVC", jsonData: Records },
+          { title: "Services View", jsonData: Records },
+        ],
+      },
+      {
+        title: "Online Services",
+        data: [
+          { title: "Online-Services SVC", jsonData: Records },
+          { title: "Online-Services View", jsonData: Records },
+        ],
+      },
+      {
+        title: "Pages",
+        data: [
+          { title: "Pages SVC", jsonData: Records },
+          { title: "Pages View", jsonData: Records },
+        ],
+      },
     ];
     const results = assets.filter((asset) => {
-      return asset?.name?.toLowerCase().includes(search?.toLowerCase());
+      return asset?.title?.toLowerCase().includes(search?.toLowerCase());
     });
     setFilteredResults(results);
   }, [search]);
@@ -47,63 +72,16 @@ const Assets = () => {
         </div>
         <div className="accordion-wrapper">
           {filteredResults.map((asset, index) => {
-            if (index === 0) {
-              return (
-                <>
-                  <AssetsBox
-                    key={index}
-                    index={index}
-                    isActive={accordianActiveIndex === index}
-                    setIsActive={setIsActive}
-                    title={asset.title}
-                    name={asset.name}
-                    secondName={asset.secondName}
-                  />
-                </>
-              );
-            }
-            if (index === 1) {
-              return (
-                <>
-                  <AssetsBox
-                    key={index}
-                    index={index}
-                    isActive={accordianActiveIndex === index}
-                    setIsActive={setIsActive}
-                    title={asset.title}
-                    name={asset.name}
-                    secondName={asset.secondName}
-                  />
-                </>
-              );
-            }
-            if (index === 2) {
-              return (
-                <>
-                  <AssetsBox
-                    key={index}
-                    index={index}
-                    isActive={accordianActiveIndex === index}
-                    setIsActive={setIsActive}
-                    title={asset.title}
-                    name={asset.name}
-                    secondName={asset.secondName}
-                  />
-                </>
-              );
-            }
             return (
-              <>
+              <Fragment key={asset.id}>
                 <AssetsBox
-                  key={index}
                   index={index}
                   isActive={accordianActiveIndex === index}
                   setIsActive={setIsActive}
                   title={asset.title}
-                  name={asset.name}
-                  secondName={asset.secondName}
+                  data={asset.data}
                 />
-              </>
+              </Fragment>
             );
           })}
         </div>

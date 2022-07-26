@@ -21,8 +21,9 @@ const Header = () => {
               <h4>Development | Stage | Production</h4>
             </div>
             <div className="data-time">
-              <h4>Last Updated:&nbsp;{date.toLocaleTimeString()}</h4> 
-              {/* <h4>{date.toLocaleDateString()}</h4> */}
+            <p>Last Updated:&nbsp;</p>
+              <h4>{date.toLocaleTimeString()} {date.toLocaleDateString()}</h4>
+       
             </div>
           </div>
 

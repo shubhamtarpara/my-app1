@@ -16,7 +16,7 @@
     width: 100%;
     max-width: 85%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .header-top{
@@ -51,3 +51,8 @@
   background-color: aliceblue;
 } */
 
+
+.data-time h4{
+    display: flex;
+    justify-self: flex-end;
+}
