@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 // import axios from "axios";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import AssetsBox from "./AssetsBox";
 import "./assets.css";
 import searchIcon from "./search.png";
@@ -10,7 +10,7 @@ const Assets = () => {
   const [search, setSearch] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [accordianActiveIndex, setAccordianActiveIndex] = useState(0);
-  const [apidata, setApiData]= useState([]);
+  const [apidata, setApiData] = useState([]);
 
   // const dates = [];
   // const today = dayjs(new Date());
@@ -30,8 +30,7 @@ const Assets = () => {
       api_key: "ur1808929-5ce183da004a34f5f6c56b81",
       format: "json",
       logs: 1,
-
-      custom_uptime_ranges:"1658892600_1658979000-1658946600_1659033000"
+      custom_uptime_ranges: "1658892600_1658979000-1658946600_1659033000",
     };
     const url = "https://api.uptimerobot.com/v2/getMonitors";
     const getData = async () => {
@@ -39,22 +38,19 @@ const Assets = () => {
         method: "POST",
         body: JSON.stringify(postdata),
         headers: { "Content-type": "application/json" },
-      }).then(async (response) => { 
-     
+      }).then(async (response) => {
         const responseData = await response.json();
         const customData = responseData.monitors.map((i) => ({
-          friendly_name: i.friendly_name,
-          custom_uptime_ranges: i.custom_uptime_ranges,
-          datetime: i.logs[0].datetime
+          title: i.friendly_name,
+          uptime: i.custom_uptime_ranges,
+          date: i.logs[0].datetime,
         }));
-
         console.log(responseData);
-        // console.log(customData);
-        setApiData(customData)
+
+        setApiData(customData);
         console.log(apidata);
       });
     };
- 
     getData();
   }, [apidata]);
 
@@ -67,8 +63,8 @@ const Assets = () => {
       {
         title: "Assets",
         data: [
-          { title: "Assets SVC", jsonData: Records },
-          { title: "Assets View", jsonData: Records },
+          { title: "Assets SVC", jsonData: apidata },
+          { title: "Assets View", jsonData: apidata },
         ],
       },
       {
@@ -97,7 +93,7 @@ const Assets = () => {
       return asset?.title?.toLowerCase().includes(search?.toLowerCase());
     });
     setFilteredResults(results);
-  }, [search]);
+  }, [apidata, search]);
 
   const setIsActive = (index) => {
     if (accordianActiveIndex === index) {
