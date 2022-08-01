@@ -6,17 +6,18 @@ const Bars = ({data}) => {
     let sum = 0;
     let count = 0;
     records.forEach((record) => {
-      sum += parseInt(record.uptime);
+      sum += parseInt(data[0].jsonData.uptime);
       count++;
     });
     return sum / count;
   };
-  console.log(data)
+
 
   return (
     <>
       <div className="main-bar-container">
         {data.map((record) => {
+          console.log(record.title)
           return (
             <>
               <div
@@ -39,13 +40,14 @@ const Bars = ({data}) => {
                   }`}
                 >
                   <h5>{record.date}</h5>
-                  <p className="record-title">{record.uptime}</p>
+                  <p className="record-title">{data[0].jsonData.uptime}</p>
                   <p>{record.title}</p>
                 </span>
               </div>
             </>
           );
         })}
+        
       </div>
 
       <div className="status-bar__text">
