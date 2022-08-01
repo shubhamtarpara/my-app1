@@ -18,7 +18,7 @@ const Assets = () => {
       api_key: "ur1808929-5ce183da004a34f5f6c56b81",
       format: "json",
       logs: 1,
-      custom_uptime_ranges: "1658892600_1658979000-1658946600_1659033000",
+      custom_uptime_ranges: "1658892600_1658979000-1658946600_1659033000-1659074671_1659161071-1659161071_1659247471",
     };
     const url = "https://api.uptimerobot.com/v2/getMonitors";
     const getData = async () => {
@@ -42,24 +42,24 @@ const Assets = () => {
           setIsLoading(false);
           const assets = [
             {
-              title: customData[0].title,
+              title: "Alphabet",
               data: [
-                { title: "Assets SVC", jsonData: customData },
-                { title: "Assets View", jsonData: customData },
+                { title: customData[2].title, jsonData: customData[2] },
+                { title: customData[3].title, jsonData: customData[3] },
               ],
             },
             {
-              title: customData[1].title,
+              title: "Tata Group",
               data: [
-                { title: "Services SVC", jsonData: customData },
-                { title: "Services View", jsonData: customData },
+                { title: customData[4].title, jsonData: customData[4] },
+                { title: customData[5].title, jsonData: customData[5] },
               ],
             },
             {
-              title: customData[2].title,
+              title: "Adani Group",
               data: [
-                { title: "Online-Services SVC", jsonData: customData },
-                { title: "Online-Services View", jsonData: customData },
+                { title: customData[0].title, jsonData: customData[0] },
+                { title: customData[1].title, jsonData: customData[1] },
               ],
             },
           ];
@@ -110,6 +110,7 @@ const Assets = () => {
       ) : (
         <div className="accordion-wrapper">
           {filteredResults.map((asset, index) => {
+            console.log(asset.data)
             return (
               <Fragment key={asset.id}>
                 <AssetsBox

@@ -11,12 +11,12 @@ const Bars = ({data}) => {
     });
     return sum / count;
   };
-  // console.log(Records)
+  console.log(data)
 
   return (
     <>
       <div className="main-bar-container">
-        {data?.map((record) => {
+        {data.map((record) => {
           return (
             <>
               <div
@@ -40,7 +40,7 @@ const Bars = ({data}) => {
                 >
                   <h5>{record.date}</h5>
                   <p className="record-title">{record.uptime}</p>
-                  <p>{record.text}</p>
+                  <p>{record.title}</p>
                 </span>
               </div>
             </>
