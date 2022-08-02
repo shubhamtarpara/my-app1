@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 // import axios from "axios";
-// import dayjs from "dayjs";
+import dayjs from "dayjs";
 import AssetsBox from "./AssetsBox";
 import "./assets.css";
 import searchIcon from "./search.png";
@@ -10,16 +10,29 @@ const Assets = () => {
   const [search, setSearch] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [accordianActiveIndex, setAccordianActiveIndex] = useState(0);
-
   const [isLoading, setIsLoading] = useState(true);
+
+  const dates = [];
+  const today = dayjs();
+  for (let d = 0; d < 50; d++) {
+    dates.push(today.add(d, "day"));
+  }
+  console.log(dates);
+
+  const ranges = dates.map(
+    (date) => `${date.unix()}_${date.add(1, "day").unix()}`
+  );
+  // console.log(ranges)
+  const start = dates[dates.length - 1].unix();
+  const end = dates[0].add(1, "day").unix();
+  ranges.push(`${end}_${start}`);
 
   useEffect(() => {
     const postdata = {
       api_key: "ur1808929-5ce183da004a34f5f6c56b81",
       format: "json",
       logs: 1,
-      custom_uptime_ranges:
-        "1658892600_1658979000-1658946600_1659033000-1659074671_1659161071-1659161071_1659247471",
+      custom_uptime_ranges: ranges.join("-"),
     };
     const url = "https://api.uptimerobot.com/v2/getMonitors";
     const getData = async () => {
@@ -32,36 +45,40 @@ const Assets = () => {
           return response.json();
         })
         .then((responseData) => {
-          // console.log(responseData);
+          console.log(responseData);
           const customData = responseData.monitors.map((i) => ({
             title: i.friendly_name,
             uptime: i.custom_uptime_ranges,
             date: i.logs[0].datetime,
           }));
-          // console.log(customData);
+          console.log(customData);
 
           setIsLoading(false);
           const assets = [
             {
               title: "Adani Group",
-              data: [
-                { title: customData[0].title, jsonData: customData[0] },
-                { title: customData[1].title, jsonData: customData[1] },
-              ],
+              service: ["Adani Enterprises Limited", "Adani Power Ltd"],
+              data: customData.filter((monitor) =>
+                ["Adani Enterprises Limited", "Adani Power Ltd"].includes(
+                  monitor.title
+                )
+              ),
             },
             {
               title: "Alphabet",
-              data: [
-                { title: customData[2].title, jsonData: customData[2] },
-                { title: customData[3].title, jsonData: customData[3] },
-              ],
+              service: ["Google", "Gmail"],
+              data: customData.filter((monitor) =>
+                ["Google", "Gmail"].includes(monitor.title)
+              ),
             },
             {
               title: "Tata Group",
-              data: [
-                { title: customData[4].title, jsonData: customData[4] },
-                { title: customData[5].title, jsonData: customData[5] },
-              ],
+              service: ["Tata Consultancy Services", "Tata Steel"],
+              data: customData.filter((monitor) =>
+                ["Tata Consultancy Services", "Tata Steel"].includes(
+                  monitor.title
+                )
+              ),
             },
           ];
 
@@ -73,7 +90,7 @@ const Assets = () => {
         });
     };
     getData();
-  }, [search]);
+  }, [ranges, search]);
 
   const searchhandle = (e) => {
     setSearch(e.target.value);
@@ -111,9 +128,9 @@ const Assets = () => {
       ) : (
         <div className="accordion-wrapper">
           {filteredResults.map((asset, index) => {
-            // console.log(asset.data[0].jsonData.uptime);
+            console.log(asset.id);
             return (
-              <Fragment key={asset.id}>
+              <Fragment key={asset.title}>
                 <AssetsBox
                   index={index}
                   isActive={accordianActiveIndex === index}
@@ -131,16 +148,3 @@ const Assets = () => {
 };
 
 export default Assets;
-
-// const dates = [];
-// const today = dayjs(new Date());
-// for (let d = 1; d < 50; d++) {
-//   dates.push(today.subtract(d, "day"));
-// }
-
-// const ranges = dates.map(
-//   (date) => `${date.unix()}_${date.add(1, "day").unix()}`
-// );
-// const start = dates[dates.length - 1].unix();
-// const end = dates[0].add(1, "day").unix();
-// ranges.push(`${start}_${end}`);

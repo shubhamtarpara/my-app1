@@ -1,36 +1,41 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./bars.css";
 
-const Bars = ({data}) => {
-  const average = (records) => {
+
+const Bars = (props) => {
+  const average = (jsonData) => {
     let sum = 0;
     let count = 0;
-    records.forEach((record) => {
-      sum += parseInt(data[0].jsonData.uptime);
+    jsonData.forEach(() => {
+      sum += parseInt(jsonData);
       count++;
     });
     return sum / count;
   };
+  // console.log("Bars-props", props);
+  const jsonData = props.data.split("-");
+  const localDate = new Date(props.date * 1000).toLocaleDateString();
 
-
+  // console.log(props.title);
   return (
-    <>
+    <Fragment>
       <div className="main-bar-container">
-        {data.map((record) => {
-          console.log(record.title)
+        {jsonData.map((record) => {
+          // console.log(props.title)
           return (
-            <>
+            <Fragment>
               <div
-                key={record.id}
                 className={`bar-content ${
-                  record.uptime === "80%" && "yellowOne"
+                  record === "80%" && "yellowOne"
                 } {bar-content ${
-                  record.uptime === "50%" && "redOne"
-                } {bar-content ${record.uptime === "100%" && "greenOne"}`}
+                  record === "50%" && "redOne"
+                } {bar-content ${record === "100.000" && "greenOne"}
+                {bar-content ${record === "0.000" && "redOne"}  
+                `}
               >
                 <span
-                  className={`tooltip ${
-                    record.id < 17 
+                  className={`tooltip tooltip-arrow-center ${
+                    record === "100.000"
                       ? "tooltip-left-22 tooltip-arrow-left"
                       : record.id >= 17 && record.id <= 35
                       ? "tooltip-center-22 tooltip-arrow-center"
@@ -39,32 +44,31 @@ const Bars = ({data}) => {
                       : ""
                   }`}
                 >
-                  <h5>{record.date}</h5>
-                  <p className="record-title">{data[0].jsonData.uptime}</p>
-                  <p>{record.title}</p>
+                  <h5>{localDate}</h5>
+                  <p className="record-title">{record}</p>
+                  <p>{'No Down time'}</p>
                 </span>
               </div>
-            </>
+            </Fragment>
           );
         })}
-        
       </div>
 
       <div className="status-bar__text">
         <div className="times-days">
-          <p>50 days ago</p>
+          <p>Today</p>
         </div>
         <div className="space"></div>
         <div className="uptime__text">
           <p>Uptime AVG : </p>
-          <h4> &nbsp;{average(data).toFixed(2)}%</h4>
+          <h4> &nbsp;{average(jsonData).toFixed(2)}%</h4>
         </div>
         <div className="space"></div>
         <div className="open-time">
-          <p>Today</p>
+          <p></p>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 

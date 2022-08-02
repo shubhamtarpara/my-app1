@@ -3,6 +3,8 @@ import "./assetsbox.css";
 import Bars from "./Bars";
 
 const AssetsBox = (props) => {
+  console.log(props.title);
+  // console.log('AssetsBox', props);
   return (
     <>
       <div className="accordion-item">
@@ -17,7 +19,7 @@ const AssetsBox = (props) => {
         </div>
 
         {props.data.map((data, index) => {
-          console.log(props.data);
+          console.log('sub-title -',data.title)
           return (
             <div className="accordion-panel" key={index}>
               <div className={props.isActive ? "panel-open" : "panel-close"}>
@@ -27,7 +29,7 @@ const AssetsBox = (props) => {
                 </div>
                 <div className="status-text">
                   {/* <Bars data={data.jsonData} /> */}
-                  <Bars data={props.data} />
+                  <Bars data={data.uptime} date={data.date} title={data.title}/>
                 </div>
               </div>
             </div>
