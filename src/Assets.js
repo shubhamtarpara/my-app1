@@ -58,8 +58,7 @@ const Assets = () => {
               service: ["Adani Enterprises Limited", "Adani Power Ltd"],
               data: customData.filter((monitor) =>
                 ["Adani Enterprises Limited", "Adani Power Ltd"].includes(
-                  monitor.title
-                )
+                  monitor.title)
               ),
             },
             {
