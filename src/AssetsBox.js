@@ -29,7 +29,7 @@ const AssetsBox = (props) => {
                 </div>
                 <div className="status-text">
                   {/* <Bars data={data.jsonData} /> */}
-                  <Bars data={data.uptime} date={data.date} title={data.title}/>
+                  <Bars data={data.uptime} date={data.date}/>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ const MidBody = () => {
     <div className="mid-container">
       <div className="service">
         <img src={checked} alt="checked" />
-        <h3>All service are opreactional</h3>
+        <h3>All service are Operational</h3>
       </div>
     
     </div>
