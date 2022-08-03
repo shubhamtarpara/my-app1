@@ -3,7 +3,7 @@ import "./assetsbox.css";
 import Bars from "./Bars";
 
 const AssetsBox = (props) => {
-  console.log(props.title);
+  // console.log(props.title);
   // console.log('AssetsBox', props);
   return (
     <>
@@ -19,7 +19,7 @@ const AssetsBox = (props) => {
         </div>
 
         {props.data.map((data, index) => {
-          console.log('sub-title -',data.title)
+          // console.log('sub-title -',data.title)
           return (
             <div className="accordion-panel" key={index}>
               <div className={props.isActive ? "panel-open" : "panel-close"}>

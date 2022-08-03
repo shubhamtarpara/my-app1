@@ -8,24 +8,22 @@ import LoadingSpinner from "./LoadingSpinner";
 
 const Assets = () => {
   const [search, setSearch] = useState("");
+  const [APIData, setAPIData] = useState([]);
   const [filteredResults, setFilteredResults] = useState([]);
   const [accordianActiveIndex, setAccordianActiveIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const dates = [];
-  const today = dayjs();
+  const today = dayjs(new Date(1655190783000));
   for (let d = 0; d < 50; d++) {
     dates.push(today.add(d, "day"));
   }
-  console.log(dates);
+
 
   const ranges = dates.map(
     (date) => `${date.unix()}_${date.add(1, "day").unix()}`
   );
-  // console.log(ranges)
-  const start = dates[dates.length - 1].unix();
-  const end = dates[0].add(1, "day").unix();
-  ranges.push(`${end}_${start}`);
+
 
   useEffect(() => {
     const postdata = {
@@ -45,13 +43,13 @@ const Assets = () => {
           return response.json();
         })
         .then((responseData) => {
-          console.log(responseData);
+          // console.log(responseData);
           const customData = responseData.monitors.map((i) => ({
             title: i.friendly_name,
             uptime: i.custom_uptime_ranges,
             date: i.logs[0].datetime,
           }));
-          console.log(customData);
+          // console.log(customData);
 
           setIsLoading(false);
           const assets = [
@@ -82,19 +80,27 @@ const Assets = () => {
             },
           ];
 
-          const results = assets.filter((asset) => {
-            return asset?.title?.toLowerCase().includes(search?.toLowerCase());
-          });
-          console.log(results);
-          setFilteredResults(results);
+          // console.log(results);
+          setAPIData(assets);
+          // console.log(assets);
+          // console.log("APIData", APIData);
         });
     };
     getData();
-  }, [ranges, search]);
+  }, [APIData, ranges]);
 
-  const searchhandle = (e) => {
-    setSearch(e.target.value);
-  };
+    
+  useEffect(() => {
+    const filteredData = APIData.filter((asset) => {
+      return  asset.title.toLowerCase().includes(search.toLowerCase());
+    });
+    setFilteredResults(filteredData);
+    // console.log(filteredData);
+
+  }, [APIData, search])
+const searchhandle = (e) => {
+  setSearch(e.target.value);
+}
   const setIsActive = (index) => {
     if (accordianActiveIndex === index) {
       setAccordianActiveIndex(-1);
@@ -128,7 +134,6 @@ const Assets = () => {
       ) : (
         <div className="accordion-wrapper">
           {filteredResults.map((asset, index) => {
-            console.log(asset.id);
             return (
               <Fragment key={asset.title}>
                 <AssetsBox
