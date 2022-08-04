@@ -4,7 +4,7 @@ import "./bars.css";
 const Bars = (props) => {
   const [avg, setAvg] = useState();
   const jsonData = props.data.split("-");
-  const localDate = new Date(props.date * 1000).toLocaleDateString();
+  // const localDate = new Date(props.date * 1000).toLocaleDateString();
   let sum = 0;
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Bars = (props) => {
     <Fragment>
       <div className="main-bar-container">
         {jsonData.map((record) => {
-          // console.log(props.title)
+         
           return (
             <Fragment>
               <div
@@ -35,20 +35,13 @@ const Bars = (props) => {
                 {bar-content ${record === "0.000" && "redOne"}  
                 `}
               >
-                <span
-                  className={`tooltip tooltip-arrow-center ${
-                    record === "100.000"
-                      ? "tooltip-left-22 tooltip-arrow-left"
-                      : record.id >= 17 && record.id <= 35
-                      ? "tooltip-center-22 tooltip-arrow-center"
-                      : record.id > 35
-                      ? "tooltip-right-22 tooltip-arrow-right"
-                      : ""
-                  }`}
-                >
-                  <h5>{localDate}</h5>
+                <span className="tooltip tooltip-arrow-center">
+                  
+                  {/* <h5>{localDate}</h5> */}
                   <p className="record-title">{record}</p>
-                  <p>{"Down time recorded"}</p>
+                  <span className="down-time-status">{record === '100.000' ? <p>No down time recorded </p> : <p>Down time recorded</p>}</span> 
+
+
                 </span>
               </div>
             </Fragment>

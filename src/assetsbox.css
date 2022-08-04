@@ -136,7 +136,7 @@
     max-width: 85%;
     height: 0;
     margin: auto;
-    overflow: hidden;
+   
 }
 
 .panel-open {
@@ -145,7 +145,7 @@
     flex-direction: column;
     border: 1px solid;
     border-radius: 3px;
-    overflow: hidden;
+   
     padding: 1rem 1rem 1rem 1rem;
     box-sizing: border-box;
     opacity: 1;

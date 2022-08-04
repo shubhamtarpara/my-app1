@@ -19,7 +19,7 @@ const Assets = () => {
     dates.push(today.add(d, "day"));
   }
 
-  // console.log(dates);
+  console.log(dates);
   const ranges = dates.map(
     (date) => `${date.unix()}_${date.add(1, "day").unix()}`
   );
@@ -86,7 +86,8 @@ const Assets = () => {
         });
     };
     getData();
-  }, [APIData, ranges]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
     
   useEffect(() => {
