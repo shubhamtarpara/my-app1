@@ -14,12 +14,12 @@ const Assets = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const dates = [];
-  const today = dayjs(new Date(1655190783000));
+  const today = dayjs(new Date(1655333958000));
   for (let d = 0; d < 50; d++) {
     dates.push(today.add(d, "day"));
   }
 
-
+  console.log(dates);
   const ranges = dates.map(
     (date) => `${date.unix()}_${date.add(1, "day").unix()}`
   );
