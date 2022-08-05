@@ -3,8 +3,7 @@ import "./assetsbox.css";
 import Bars from "./Bars";
 
 const AssetsBox = (props) => {
-  // console.log(props.title);
-  // console.log('AssetsBox', props);
+
   return (
     <>
       <div className="accordion-item">
