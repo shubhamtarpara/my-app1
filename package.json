@@ -10,6 +10,7 @@
     "axios": "^0.27.2",
     "dayjs": "^1.11.4",
     "eslint-plugin-react-hooks": "^4.7.0-next-2c7dea736-20220726",
+    "font-awesome": "^4.7.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

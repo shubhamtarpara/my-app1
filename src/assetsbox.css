@@ -92,18 +92,20 @@
     font-weight: 900;
     color: #000;
     border-top: 1px solid #E0E0E0;
-    border-bottom: 1px solid #E0E0E0;
+    /* border-bottom: 1px solid #E0E0E0; */
     cursor: pointer;
     align-items: center;
 }
 
-.accordion-title:hover {
+/* .accordion-title:hover {
     color: white;
     border: 1px solid white;
     background-color: black;
-}
-
-.minus {
+} */
+/* .inactive {
+ background-color: #000000;
+} */
+/* .minus {
     content: url('../src/line.svg');
     width: 24px;
     height: 24px;
@@ -114,7 +116,7 @@
     width: 24px;
     height: 24px;
 
-}
+} */
 
 .accordion-title button {
     position: relative;
@@ -136,6 +138,7 @@
     max-width: 85%;
     height: 0;
     margin: auto;
+    transition: all .3s ease-in;
    
 }
 
@@ -143,16 +146,18 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    border: 1px solid;
+border: 1px solid #bdbdbd;
     border-radius: 3px;
-   
     padding: 1rem 1rem 1rem 1rem;
     box-sizing: border-box;
     opacity: 1;
-    height: 180px;
+    height: 309px;
     margin: auto;
     margin: 10px;
+    transition: all .3s ease-in;
 }
+
+
 /* 
 .border-bottom{
     border-bottom: 1px solid #E0E0E0 !important;

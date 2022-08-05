@@ -14,7 +14,7 @@ const Assets = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const dates = [];
-  const today = dayjs(new Date(1655333958000));
+  const today = dayjs(new Date(1655440865000)); 
   for (let d = 0; d < 50; d++) {
     dates.push(today.add(d, "day"));
   }
@@ -23,7 +23,6 @@ const Assets = () => {
   const ranges = dates.map(
     (date) => `${date.unix()}_${date.add(1, "day").unix()}`
   );
-
 
   useEffect(() => {
     const postdata = {
@@ -43,13 +42,11 @@ const Assets = () => {
           return response.json();
         })
         .then((responseData) => {
-          // console.log(responseData);
           const customData = responseData.monitors.map((i) => ({
             title: i.friendly_name,
             uptime: i.custom_uptime_ranges,
             date: i.logs[0].datetime,
           }));
-          // console.log(customData);
 
           setIsLoading(false);
           const assets = [
@@ -58,7 +55,8 @@ const Assets = () => {
               service: ["Adani Enterprises Limited", "Adani Power Ltd"],
               data: customData.filter((monitor) =>
                 ["Adani Enterprises Limited", "Adani Power Ltd"].includes(
-                  monitor.title)
+                  monitor.title
+                )
               ),
             },
             {
@@ -79,28 +77,23 @@ const Assets = () => {
             },
           ];
 
-          // console.log(results);
           setAPIData(assets);
-          // console.log(assets);
-          // console.log("APIData", APIData);
         });
     };
     getData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-    
   useEffect(() => {
     const filteredData = APIData.filter((asset) => {
-      return  asset.title.toLowerCase().includes(search.toLowerCase());
+      return asset.title.toLowerCase().includes(search.toLowerCase());
     });
     setFilteredResults(filteredData);
     // console.log(filteredData);
-
-  }, [APIData, search])
-const searchhandle = (e) => {
-  setSearch(e.target.value);
-}
+  }, [APIData, search]);
+  const searchhandle = (e) => {
+    setSearch(e.target.value);
+  };
   const setIsActive = (index) => {
     if (accordianActiveIndex === index) {
       setAccordianActiveIndex(-1);

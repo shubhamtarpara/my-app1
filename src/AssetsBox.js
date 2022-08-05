@@ -12,17 +12,21 @@ const AssetsBox = (props) => {
           onClick={(e) => props.setIsActive(props.index)}
           className={props.isActive ? "active" : "inactive"}
         >
-          <div className="accordion-title">
+          <div  className={props.isActive ? 'accordion-title active-accordion' : 'accordion-title inactive-accordion'}>
             {props.title}
-            <div className={props.isActive ? "minus" : "plus"}></div>
+            <i className={props.isActive 
+             ? "fa fa-angle-down fa-rotate-180" 
+             : "fa fa-angle-down"}
+           ></i>
           </div>
+          
         </div>
-
+        <div className={props.isActive ? "panel-open" : "panel-close"}>
         {props.data.map((data, index) => {
           // console.log('sub-title -',data.title)
           return (
             <div className="accordion-panel" key={index}>
-              <div className={props.isActive ? "panel-open" : "panel-close"}>
+             
                 <div className="status-bar-title">
                   <h5>{data.title} </h5>
                   <p>Operational</p>
@@ -31,10 +35,11 @@ const AssetsBox = (props) => {
                   {/* <Bars data={data.jsonData} /> */}
                   <Bars data={data.uptime} date={data.date}/>
                 </div>
-              </div>
+              
             </div>
           );
         })}
+        </div>
       </div>
     </>
   );
