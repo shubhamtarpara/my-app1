@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import axios from "axios";
 import dayjs from "dayjs";
 import AssetsBox from "./AssetsBox";
 import "./assets.css";
@@ -13,18 +12,17 @@ const Assets = () => {
   const [accordianActiveIndex, setAccordianActiveIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  const dates = [];
-  const today = dayjs(new Date(1655440865000)); 
-  for (let d = 0; d < 50; d++) {
-    dates.push(today.add(d, "day"));
-  }
-
-  console.log(dates);
-  const ranges = dates.map(
-    (date) => `${date.unix()}_${date.add(1, "day").unix()}`
-  );
-
   useEffect(() => {
+    const dates = [];
+    const today = dayjs(new Date(1655440865000));
+    for (let d = 0; d < 50; d++) {
+      dates.push(today.add(d, "day"));
+    }
+
+    const ranges = dates.map(
+      (date) => `${date.unix()}_${date.add(1, "day").unix()}`
+    );
+
     const postdata = {
       api_key: "ur1808929-5ce183da004a34f5f6c56b81",
       format: "json",
@@ -36,7 +34,10 @@ const Assets = () => {
       await fetch(url, {
         method: "POST",
         body: JSON.stringify(postdata),
-        headers: { "Content-type": "application/json" },
+        headers: {
+          "Content-type": "application/json",
+          Accept: "application/json",
+        },
       })
         .then((response) => {
           return response.json();
@@ -81,7 +82,6 @@ const Assets = () => {
         });
     };
     getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -89,7 +89,6 @@ const Assets = () => {
       return asset.title.toLowerCase().includes(search.toLowerCase());
     });
     setFilteredResults(filteredData);
-    // console.log(filteredData);
   }, [APIData, search]);
   const searchhandle = (e) => {
     setSearch(e.target.value);
